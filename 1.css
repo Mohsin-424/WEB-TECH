@@ -1,0 +1,149 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Typography and Colors */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  h1, h2 {
+    margin-bottom: 1rem;
+    color: #0056b3;
+  }
+  
+  /* Layout and Flexbox */
+  #container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+    justify-content:center;
+  }
+  .header, .footer {
+    width: 100%;
+    background: #983838;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+  }
+  .sidebar {
+    flex: 1 1 200px;
+    background: #04f52c;
+    padding: 1rem;
+  }
+  .main-content {
+    flex: 4 1 600px;
+    padding: 1rem;
+    background: #0fc6eb;
+  }
+  
+  /* Buttons */
+  button {
+    padding: 0.5rem 1rem;
+    background: #1af50e;
+    color: #fff;
+    border: 5px dotted;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  button:hover {
+    background: #0056b3;
+    border:none;
+  }
+  
+  /* Links and Pseudo-classes */
+  a {
+    color: #000408;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  ul li:hover::before {
+    content: "👉 ";
+    color: rgb(29, 243, 68);
+  }
+  
+  /* Flexbox and Grid Layout */
+  .flex-container {
+    display: flex;
+    gap: 1rem;
+  }
+  .flex-item {
+    background: #156cdf;
+    padding: 1rem;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  .grid-item {
+    background: #cf0a8d;
+    padding: 1rem;
+  }
+  
+  /* Positioning */
+  .relative-box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: #b6d00f;
+  }
+  .absolute-box {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    background: rgba(150, 74, 74, 0.5);
+  }
+  
+  /* CSS Variables */
+  :root {
+    --primary-color: #e17910;
+    --secondary-color: #0b9b9b;
+  }
+  
+  /* Using Variables */
+  .header {
+    background-color: var(--primary-color);
+  }
+  .sidebar {
+    background-color: var(--secondary-color);
+  }
+  
+  /* Keyframes and Transitions */
+  button {
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Media Query */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    .sidebar {
+      order: 1;
+    }
+    .main-content {
+      order: 2;
+    }
+  }
+  
