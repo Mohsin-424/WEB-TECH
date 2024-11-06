@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive HTML Elements Example</title>
+</head>
+<body>
+
+    <!-- Headings -->
+    <header>
+        <h1>Main Heading (H1)</h1>
+        <h2>Subheading Level 2 (H2)</h2>
+        <h3>Subheading Level 3 (H3)</h3>
+        <h4>Subheading Level 4 (H4)</h4>
+        <h5>Subheading Level 5 (H5)</h5>
+        <h6>Subheading Level 6 (H6)</h6>
+    </header>
+
+    <!-- Paragraphs and Text Styling -->
+    <section>
+        <h2>Paragraphs and Text Styling</h2>
+        <p>This is a simple paragraph demonstrating basic text styling options in HTML.</p>
+        <p><strong>Bold text</strong>, <em>italic text</em>, <u>underlined text</u>, and <mark>highlighted text</mark>.</p>
+    </section>
+
+    <!-- Lists: Ordered and Unordered -->
+    <section>
+        <h2>Lists</h2>
+        <h3>Unordered List</h3>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <h3>Ordered List</h3>
+        <ol>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+        </ol>
+    </section>
+
+    <!-- Images and Links -->
+    <section>
+        <h2>Images and Links</h2>
+        <p>Here's an image with alternative text:</p>
+        <img src="image.jpg" alt="A descriptive image" width="200" height="150">
+        <p><a href="https://example.com" target="_blank">Visit Example.com</a></p>
+    </section>
+
+    <!-- Tables -->
+    <section>
+        <h2>Tables</h2>
+        <table border="1">
+            <caption>Sample Table</caption>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>25</td>
+                    <td>New York</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>30</td>
+                    <td>Los Angeles</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">End of Table</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <!-- Forms and Input Elements -->
+    <section>
+        <h2>Forms and Input Elements</h2>
+        <form action="/submit-form" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+
+            <label for="bio">Bio:</label>
+            <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Tell us about yourself..."></textarea>
+            <br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <br>
+
+            <fieldset>
+                <legend>Subscription</legend>
+                <input type="checkbox" id="newsletter" name="newsletter" checked>
+                <label for="newsletter">Subscribe to newsletter</label>
+                <br>
+                <input type="radio" id="daily" name="subscription" value="daily" checked>
+                <label for="daily">Daily</label>
+                <input type="radio" id="weekly" name="subscription" value="weekly">
+                <label for="weekly">Weekly</label>
+            </fieldset>
+            <br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Audio, Video, and Iframe -->
+    <section>
+        <h2>Audio, Video, and Iframe</h2>
+
+        <!-- Audio Element -->
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <!-- Video Element -->
+        <video width="320" height="240" controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Iframe Element (Embedded Content) -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+    <!-- Semantic HTML and Additional Elements -->
+    <section>
+        <h2>Semantic HTML Elements</h2>
+        
+        <!-- Article -->
+        <article>
+            <h3>Sample Article</h3>
+            <p>This is an article element used to represent a self-contained piece of content.</p>
+        </article>
+
+        <!-- Aside -->
+        <aside>
+            <p>This is an aside element, often used for side notes or additional information.</p>
+        </aside>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Comprehensive HTML Example. All rights reserved.</p>
+        </footer>
+    </section>
+
+</body>
+</html>
