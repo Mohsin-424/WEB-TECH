@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .heading1 {
     font-size: 3em;
     font-weight: bold;
@@ -9,3 +10,16 @@
     color: rgb(255, 127, 80);
 
 }
+=======
+.heading1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: rgb(235, 35, 32);
+}
+.heading2{
+    font-size: 2em;
+    font-weight: bold;
+    color: rgb(255, 127, 80);
+
+}
+>>>>>>> 8ccafaded905507e70ef66094658ada51daa9692
