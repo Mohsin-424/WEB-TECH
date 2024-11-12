@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page CS-5 </title>
+    <link rel="stylesheet" href="loginpage.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Login Here</h2>
+
+      <form id="loginForm" onsubmit="return validateForm()">
+          
+        <!-- For Username -->
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required />
+      <!-- Email -->
+        
+         <label for="Email"> Email </label>
+        <input type="email" id="email" name="Email" required /> 
+        <!-- For Password -->
+        <label for="password">P assword</label>
+        <input type="password" id="password" name="password" required />
+<!-- Submit Button -->
+
+        <button type="submit">Login</button>
+      </form>
+
+      <p id="error-message"></p>
+    </div>
+    <script src="loginpage.js"></script>
+  </body>
+</html>
