@@ -1,0 +1,13 @@
+<library>
+    <book>
+        <title>XML Basics</title>
+        <author>Jane Smith</author>
+        <year>2023</year>
+    </book>
+    <book>
+        <title>Programming Fundamentals</title>
+        <author>John Doe</author>
+        <year>2020</year>
+    </book>
+</library>
+  

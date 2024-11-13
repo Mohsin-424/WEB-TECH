@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All-in-One HTML Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background: #555;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #000;
+        }
+        th, td {
+            text-align: center;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Welcome to My Website</h1>
+        <p>Your one-stop page for learning HTML</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#table">Table</a>
+        <a href="#form">Form</a>
+        <a href="#media">Media</a>
+    </nav>
+
+    <!-- Main Content -->
+    <section>
+        <!-- About Section -->
+        <article id="about">
+            <h2>About This Page</h2>
+            <p>This page demonstrates various HTML elements in a single document.</p>
+            <p><b>HTML Topics Covered:</b> Headings, Lists, Links, Tables, Forms, Multimedia, Semantic Tags, and more!</p>
+        </article>
+
+        <!-- Table Section -->
+        <article id="table">
+            <h2>Sample Table</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Occupation</th>
+                </tr>
+                <tr>
+                    <td>John Doe</td>
+                    <td>25</td>
+                    <td>Web Developer</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>30</td>
+                    <td>Graphic Designer</td>
+                </tr>
+            </table>
+        </article>
+
+        <!-- Form Section -->
+        <article id="form">
+            <h2>Contact Us</h2>
+            <form action="/submit" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name"><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email"><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" cols="30" placeholder="Your Message"></textarea><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </article>
+
+        <!-- Media Section -->
+        <article id="media">
+            <h2>Media Examples</h2>
+            <!-- Image -->
+            <h3>Image</h3>
+            <img src="https://via.placeholder.com/200" alt="Placeholder Image">
+
+            <!-- Audio -->
+            <h3>Audio</h3>
+            <audio controls>
+                <source src="sample.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <!-- Video -->
+            <h3>Video</h3>
+            <video controls width="320">
+                <source src="sample.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </article>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Website. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
