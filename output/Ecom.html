@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple E-Commerce Page</title>
+  <style>
+    /* CSS: Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f3f4f6;
+    }
+
+    header {
+      width: 100%;
+      padding: 1rem;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .cart button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    main {
+      width: 90%;
+      max-width: 800px;
+      margin: 2rem 0;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .product {
+      flex: 1;
+      min-width: 200px;
+      padding: 1rem;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .product h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .product button {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .cart-section {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Simple E-Commerce Store</h1>
+    <div class="cart">
+      <button onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="products">
+      <h2>Products</h2>
+      <div class="product" data-name="Product 1" data-price="20">
+        <h3>Product 1</h3>
+        <p>Price: $20</p>
+        <button onclick="addToCart('Product 1', 20)">Add to Cart</button>
+      </div>
+      <div class="product" data-name="Product 2" data-price="15">
+        <h3>Product 2</h3>
+        <p>Price: $15</p>
+        <button onclick="addToCart('Product 2', 15)">Add to Cart</button>
+      </div>
+      <div class="product" data-name="Product 3" data-price="25">
+        <h3>Product 3</h3>
+        <p>Price: $25</p>
+        <button onclick="addToCart('Product 3', 25)">Add to Cart</button>
+      </div>
+    </section>
+
+    <section id="cart-section" class="cart-section hidden">
+      <h2>Shopping Cart</h2>
+      <div id="cart-items"></div>
+      <p>Total: $<span id="total-price">0</span></p>
+      <button onclick="checkout()">Checkout</button>
+    </section>
+  </main>
+
+  <script>
+    let cart = [];
+    let cartVisible = false;
+
+    function addToCart(name, price) {
+      // Check if product is already in the cart
+      const existingProduct = cart.find(item => item.name === name);
+      if (existingProduct) {
+        existingProduct.quantity += 1;
+      } else {
+        cart.push({ name, price, quantity: 1 });
+      }
+
+      updateCartCount();
+      displayCartItems();
+    }
+
+    function updateCartCount() {
+      const cartCount = document.getElementById("cart-count");
+      cartCount.textContent = cart.reduce((total, item) => total + item.quantity, 0);
+    }
+
+    function toggleCart() {
+      cartVisible = !cartVisible;
+      const cartSection = document.getElementById("cart-section");
+      cartSection.classList.toggle("hidden", !cartVisible);
+      displayCartItems();
+    }
+
+    function displayCartItems() {
+      const cartItems = document.getElementById("cart-items");
+      const totalPrice = document.getElementById("total-price");
+      
+      cartItems.innerHTML = ""; // Clear current cart items
+      let total = 0;
+
+      cart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+
+        const itemElement = document.createElement("div");
+        itemElement.textContent = `${item.name} - $${item.price} x ${item.quantity} = $${itemTotal}`;
+        cartItems.appendChild(itemElement);
+      });
+
+      totalPrice.textContent = total.toFixed(2);
+    }
+
+    function checkout() {
+      alert("Checkout successful!");
+      cart = [];
+      updateCartCount();
+      displayCartItems();
+      toggleCart(); // Hide the cart section after checkout
+    }
+  </script>
+</body>
+</html>
