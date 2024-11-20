@@ -16,10 +16,10 @@ function validateForm() {
         return false;
     }
   
-  if (password.length < 6) {
-      errorMessage.textContent = "Password must be at least 6 characters.";
-      return false;
-    }
+  // if (password.length < 6) {
+  //     errorMessage.textContent = "Password must be at least 6 characters.";
+  //     return false;
+  //   }
 
     if (username.length < 4) {
         errorMessage.textContent = "Username must be at least 4 characters.";
