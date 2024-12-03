@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="registrationForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" required>
+        
+        <button type="submit">Submit</button>
+      </form>
+      <div id="errorMessages"></div>
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    const errors = [];
+    
+    if (!email.includes('@') || !email.endsWith('.com')) {
+        errors.push('Email must contain "@" and ".com".');
+    }
+    if (password.length < 8) {
+        errors.push('Password must be at least 8 characters long.');
+    }
+    if (password !== confirmPassword) {
+        errors.push('Passwords do not match.');
+    }
+    
+    if (errors.length > 0) {
+        event.preventDefault();
+        document.getElementById('errorMessages').innerHTML = errors.join('<br>');
+    }
+});
+
+  </script>    
+    
+</body>
+</html>

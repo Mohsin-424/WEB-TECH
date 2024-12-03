@@ -1,13 +1,15 @@
 
-// 1. Variables and Data Types.......................................
+// // 1. Variables and Data Types.......................................
 let name = "Mohsin";          // String
-const age = 22;             // Number (constant)
-// var sum1 = 29.8               // Number ( Float)
+// // // var name = "Mohsin";          // String
+const age = 23;           // Number (constant)
+// // // var sum1 = 29.8               // Number ( Float)
 let isEmployed = true;      // Boolean
 
-console.log('employed' , isEmployed)
-console.log(age)
-console.log(name)
+// // // console.log(name)
+// // // console.log('employed' , isEmployed)
+// console.log(typeof(isEmployed))
+// // console.log(age , nameisEmployed, ageEmployed', isEmployed)
 
 // 2. Basic Operators...............................................
 // let a = 10
@@ -17,15 +19,15 @@ console.log(name)
 // console.log('The sum of a and b is ', c)
 // console.log('The product of a and b is ', d)
 
-// let sum = 10 + 5;           // Addition
+// let sum = 11 + 5;           // Addition
 
 // let product = 10 * 5;       // Multiplication
 // let division = 10 / 2;      // Division
 
-// let isEqual = sum === 15;   // Comparison.....................
+// let isEqual = sum == 15;   // Comparison.....................
 
-// == equality chcek 
-// === considtion check
+// // == equality chcek 
+// // === considtion check
 
 // console.log('The sum is ', sum )
 // console.log('The Product is ',product)
@@ -34,11 +36,11 @@ console.log(name)
 
 // 3. Control Structures: Conditionals
 //  \n == Escape Sequence
-// if (isEmployed) {
-//     console.log(`${name}  is employed  \n his age is ${age}`);
-// } else {
-//     console.log(`${name} is not employed.`);
-// }
+if (isEmployed) {
+    console.log(`${name}  is employed  \n his age is ${age}`);
+} else {
+    console.log(`${name} is not employed.`);
+}
 
 
 //  4. Control Structures: Loops
@@ -46,18 +48,18 @@ console.log(name)
 //     condition and output
 // } 
     
-// for (let i = 0; i <= 50; i++) {    // for loop
+// for (let i = 0; i < 50; i++) {    // for loop
 //     console.log("For Loop:", i);
 // }
 
 
 
-// let count = 0; // initialize count
+let count = 0; // initialize count
 
-// while (count <= 50) {              // while loop
-//     console.log("While Loop:", count);
-//     count++; // increment
-// }
+while (count < 50) {              // while loop
+    console.log("While Loop:", count);
+    count++; // increment
+}
 
 
 

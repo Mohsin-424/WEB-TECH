@@ -12,7 +12,7 @@ function validateForm() {
     }
     
     if (email.length < 5) {
-        errorMessage.textContent = "Email must be at least 6 characters";
+        errorMessage.textContent = "Email must be at least 5 characters";
         return false;
     }
   
