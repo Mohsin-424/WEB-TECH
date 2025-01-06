@@ -1,10 +1,10 @@
 
 // // 1. Variables and Data Types.......................................
-let name = "Mohsin";          // String
-// // // var name = "Mohsin";          // String
-const age = 23;           // Number (constant)
-// // // var sum1 = 29.8               // Number ( Float)
-let isEmployed = true;      // Boolean
+// let name = "Mohsin";          // String
+// // // // var name = "Mohsin";          // String
+// const age = 23;           // Number (constant)
+// // // // var sum1 = 29.8               // Number ( Float)
+// let isEmployed = true;      // Boolean
 
 // // // console.log(name)
 // // // console.log('employed' , isEmployed)
@@ -36,11 +36,11 @@ let isEmployed = true;      // Boolean
 
 // 3. Control Structures: Conditionals
 //  \n == Escape Sequence
-if (isEmployed) {
-    console.log(`${name}  is employed  \n his age is ${age}`);
-} else {
-    console.log(`${name} is not employed.`);
-}
+// if (isEmployed) {
+//     console.log(`${name}  is employed  \n his age is ${age}`);
+// } else {
+//     console.log(`${name} is not employed.`);
+// }
 
 
 //  4. Control Structures: Loops
@@ -54,12 +54,12 @@ if (isEmployed) {
 
 
 
-let count = 0; // initialize count
+// let count = 0; // initialize count
 
-while (count < 50) {              // while loop
-    console.log("While Loop:", count);
-    count++; // increment
-}
+// while (count < 50) {              // while loop
+//     console.log("While Loop:", count);
+//     count++; // increment
+// }
 
 
 
